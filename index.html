@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Component Library — Showcase</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="c-navbar">
+      <div class="c-navbar__brand">Mini UI</div>
+      <nav class="c-navbar__nav">
+        <a class="c-navbar__link" href="#buttons">Buttons</a>
+        <a class="c-navbar__link" href="#inputs">Inputs</a>
+        <a class="c-navbar__link" href="#cards">Cards</a>
+        <a class="c-navbar__link" href="#badges">Badges</a>
+        <a class="c-navbar__link" href="#alerts">Alerts</a>
+        <a class="c-navbar__link" href="#modal">Modal</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section id="intro" class="container">
+        <h1 class="page__title">Mini Component Library</h1>
+        <p class="muted">
+          A small collection of reusable UI patterns in pure CSS. Uses CSS
+          variables and a consistent `c-` naming convention.
+        </p>
+      </section>
+
+      <section id="buttons" class="container component">
+        <h2>Buttons</h2>
+        <div class="demo-row">
+          <button class="c-btn c-btn--primary">Primary</button>
+          <button class="c-btn c-btn--secondary">Secondary</button>
+          <button class="c-btn" disabled>Disabled</button>
+        </div>
+      </section>
+
+      <section id="inputs" class="container component">
+        <h2>Inputs</h2>
+        <div class="form-grid">
+          <label class="c-field">
+            <span class="c-field__label">Regular</span>
+            <input class="c-input" placeholder="Type here" />
+          </label>
+
+          <label class="c-field">
+            <span class="c-field__label">With error</span>
+            <input class="c-input c-input--error" placeholder="Invalid value" />
+            <span class="c-field__help c-field__help--error"
+              >This field is required</span
+            >
+          </label>
+        </div>
+      </section>
+
+      <section id="cards" class="container component">
+        <h2>Cards</h2>
+        <div class="card-grid">
+          <article class="c-card">
+            <h3 class="c-card__title">Simple card</h3>
+            <p class="c-card__body">Cards group related content and actions.</p>
+            <div class="c-card__actions">
+              <button class="c-btn c-btn--primary">Action</button>
+            </div>
+          </article>
+
+          <article class="c-card c-card--elevated">
+            <h3 class="c-card__title">Elevated card</h3>
+            <p class="c-card__body">With stronger shadow and border radius.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="badges" class="container component">
+        <h2>Badges</h2>
+        <div class="demo-row">
+          <span class="c-badge">Default</span>
+          <span class="c-badge c-badge--accent">Accent</span>
+          <span class="c-badge c-badge--pill">99+</span>
+        </div>
+      </section>
+
+      <section id="alerts" class="container component">
+        <h2>Alerts</h2>
+        <div class="stack">
+          <div class="c-alert">Default alert — neutral message</div>
+          <div class="c-alert c-alert--success">
+            Success! Operation completed.
+          </div>
+          <div class="c-alert c-alert--error">
+            Error — something went wrong.
+          </div>
+          <div class="c-alert c-alert--warning">Warning — check this out.</div>
+        </div>
+      </section>
+
+      <section id="modal" class="container component">
+        <h2>Modal (Pure CSS)</h2>
+        <label for="modal-toggle" class="c-btn c-btn--primary"
+          >Open modal</label
+        >
+        <input type="checkbox" id="modal-toggle" class="c-modal__toggle" />
+        <div class="c-modal" aria-hidden="true">
+          <label for="modal-toggle" class="c-modal__backdrop"></label>
+          <div class="c-modal__panel">
+            <h3 class="c-modal__title">Modal Title</h3>
+            <p class="c-modal__body">
+              This modal is implemented using the checkbox toggle technique — no
+              JavaScript required.
+            </p>
+            <div class="c-modal__actions">
+              <label for="modal-toggle" class="c-btn">Close</label>
+              <button class="c-btn c-btn--primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="container muted small">
+        Designed with CSS variables • `c-` prefix for components
+      </footer>
+    </main>
+  </body>
+</html>
